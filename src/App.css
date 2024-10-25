@@ -1,42 +1,104 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+:root{
+  --dark:#2f2f2f;
+  --textDark:white;
+  --primary:#a39da4;
+  --textPrimary:#3b174f;
+  --font1:Helvetica;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary);
+}
+.cntr{
+  position: relative;
+  width:100%;
+  height: 100%;
+  background: var(--primary);
+  color: var(--textPrimary);
+  font-family: var(--font1);
   text-align: center;
+  /* border: 2px solid; */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+nav{
+  width: 100%;
+  max-height: 10vh;
+  padding: 10px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav ul.right{
+  display: flex;
+  /* border: 1px solid; */
+  font-size: 20px;
+  align-items: center;
+  gap: 20px;
+  list-style-type: none;
+}
+ul li:hover{
+  letter-spacing: 2px;
+  font-weight: 550;
+  transition: 0.3s all ease-in;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+div.left{
+  display: flex;
+  /* border: 1px solid; */
+  align-items: center;
 }
 
-.card {
-  padding: 2em;
+div.side{
+  position: absolute;
+  min-height: 90vh;
+  width: max(20%,100px);
+  border: 1px solid;
 }
 
-.read-the-docs {
-  color: #888;
+.side ul{
+  width: 100%;
+  border: 1px solid;
+}
+
+.side ul li{
+  width: 100%;
+  height: 2rem;
+  border: 1px solid;
+}
+
+div.arrow{
+  position: absolute;
+  padding: 2px 8px;
+  height: 30%;
+  top: 35%;
+  left: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  word-break: break-all;
+  border: 2px solid rgb(88, 12, 105);
+  z-index: 5;
+}
+
+div.arrow:hover{
+  background-color:var(--textPrimary);
+  color: var(--primary);
+}
+
+div.mainSec{
+  width: 80%;
+  position: relative;
+  left: 20%;
+  height: 90vh;
+  border: 2px solid red;
+  display: flex;
 }
